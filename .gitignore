@@ -1,0 +1,5 @@
+# Local agent tooling (skills installs)
+.agents/
+.claude/
+.grok/
+skills-lock.json
