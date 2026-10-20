@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hộ Kinh Doanh AI — Trợ lý thuế & kế toán cho hộ kinh doanh</title>
+  <meta name="description" content="Hỏi về thuế, thủ tục và sổ sách cho hộ kinh doanh. Trợ lý AI trả lời 24/7, dẫn chiếu nghị định, thông tư còn hiệu lực. Mở tài khoản miễn phí, không thuê bao, nạp từ 10.000đ.">
+  <link rel="canonical" href="https://hokinhdoanh.ai/">
+  <meta name="theme-color" content="#F7F3EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0C1512" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="Hộ Kinh Doanh AI">
+  <meta property="og:title" content="Hỏi thuế, nhận câu trả lời có căn cứ — Hộ Kinh Doanh AI">
+  <meta property="og:description" content="Trợ lý AI giải đáp thuế, thủ tục và sổ sách cho hộ kinh doanh, kèm trích dẫn văn bản pháp luật còn hiệu lực.">
+  <meta property="og:url" content="https://tinyc0der.github.io/hokinhdoanh/">
+  <meta property="og:image" content="https://tinyc0der.github.io/hokinhdoanh/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hộ Kinh Doanh AI — Hỏi thuế, nhận câu trả lời có căn cứ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hokinhdoanhAI">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="assets/app.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Hộ Kinh Doanh AI",
+    "url": "https://hokinhdoanh.ai",
+    "logo": "https://tinyc0der.github.io/hokinhdoanh/apple-touch-icon.png",
+    "email": "lienhe@hokinhdoanh.ai",
+    "telephone": "+84393244133",
+    "sameAs": [
+      "https://apps.apple.com/vn/app/hokinhdoanh-ai/id6790461135",
+      "https://play.google.com/store/apps/details?id=com.nextvn.hkdapp"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua đến nội dung</a>
+
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+      <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+      <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-badge" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+      <symbol id="i-infinity" viewBox="0 0 24 24"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></symbol>
+      <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-apple" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></symbol>
+      <symbol id="mark" viewBox="0 0 64 64">
+        <rect width="64" height="64" rx="16" fill="#0F3B2E"/>
+        <path d="M19 13h24a7 7 0 0 1 7 7v12a7 7 0 0 1-7 7H29.5l-8.6 7.2c-.8.7-1.9.1-1.9-.9V39a7 7 0 0 1-7-7V20a7 7 0 0 1 7-7Z" fill="#F7F3EA"/>
+        <rect x="20" y="21" width="20" height="3.6" rx="1.8" fill="#0F3B2E"/>
+        <rect x="20" y="28.4" width="12" height="3.6" rx="1.8" fill="#0F3B2E"/>
+        <circle cx="46" cy="43" r="11.5" fill="#0F3B2E"/>
+        <circle cx="46" cy="43" r="9" fill="#E04E2E"/>
+        <path d="m41.6 43.2 3 3 5.8-6" fill="none" stroke="#F7F3EA" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Header -->
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Hộ Kinh Doanh AI — về đầu trang">
+        <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+        <span class="brand-word">hokinhdoanh<span>.ai</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="#tinh-nang">Tính năng</a>
+        <a href="#cach-hoat-dong">Cách hoạt động</a>
+        <a href="#van-ban">Văn bản</a>
+        <a href="#bang-gia">Bảng giá</a>
+        <a href="#hoi-dap">Hỏi đáp</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="link-quiet" href="https://hokinhdoanh.ai/dang-nhap">Đăng nhập</a>
+        <a class="btn btn-primary btn-sm" href="https://hokinhdoanh.ai/dang-nhap">Bắt đầu <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Mở menu">
+          <svg class="ic ic-open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="ic ic-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#tinh-nang">Tính năng</a>
+      <a href="#cach-hoat-dong">Cách hoạt động</a>
+      <a href="#van-ban">Văn bản pháp luật</a>
+      <a href="#bang-gia">Bảng giá</a>
+      <a href="#ung-dung">Ứng dụng</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+      <a href="#lien-he">Liên hệ</a>
+      <a class="btn btn-primary" href="https://hokinhdoanh.ai/dang-nhap">Đăng ký miễn phí</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <a class="pill" href="#van-ban">
+            <span class="pill-dot" aria-hidden="true"></span>
+            Đã cập nhật Nghị định 141/2026/NĐ-CP
+            <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <h1>Hỏi thuế hộ kinh doanh, nhận câu trả lời <em class="serif">có căn cứ.</em></h1>
+          <p class="lede">Trợ lý AI giải đáp thủ tục, sổ sách và kê khai thuế cho hộ kinh doanh — đối chiếu với nghị định, thông tư còn hiệu lực và trích dẫn rõ ràng để bạn yên tâm áp dụng.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="https://hokinhdoanh.ai/dang-nhap">Đăng ký miễn phí <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-lg" href="#cach-hoat-dong">Xem cách hoạt động</a>
+          </div>
+          <ul class="hero-facts">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Mở tài khoản 0đ</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Không thuê bao</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Trả lời 24/7</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="float-chip chip-a" aria-hidden="true"><svg class="ic" ><use href="#i-badge"/></svg>Trích dẫn căn cứ pháp lý</div>
+          <div class="float-chip chip-b" aria-hidden="true"><svg class="ic"><use href="#i-mic"/></svg>Gõ hoặc nói</div>
+
+          <figure class="chat" aria-label="Ví dụ một cuộc hội thoại với trợ lý">
+            <div class="chat-head">
+              <svg class="chat-avatar" aria-hidden="true"><use href="#mark"/></svg>
+              <div>
+                <strong>Trợ lý Hộ Kinh Doanh AI</strong>
+                <span class="online"><i aria-hidden="true"></i>Trực tuyến</span>
+              </div>
+            </div>
+            <div class="chat-body" data-chat>
+              <p class="msg msg-user">Hộ kinh doanh của tôi nộp thuế theo tỷ lệ trên doanh thu, cuối năm có phải quyết toán không?</p>
+              <div class="ai-slot">
+                <div class="typing" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="msg msg-ai">
+                  <p data-step>Với hộ nộp thuế theo <b>tỷ lệ % trên doanh thu</b> (PP1), theo quy định áp dụng từ năm 2026, anh <mark>không phải quyết toán thuế năm</mark>.</p>
+                  <p data-step><b>Bản chất:</b> thuế GTGT và TNCN được tính trên doanh thu phát sinh theo từng kỳ (tháng hoặc quý), nên nghĩa vụ thuế hoàn thành ngay khi kê khai và nộp cho kỳ đó.</p>
+                  <p data-step><b>Khác với PP2:</b> thuế không dựa vào chênh lệch thu nhập cuối năm, vì vậy không phát sinh thủ tục quyết toán.</p>
+                  <span class="stamp" data-step><small>Căn cứ</small>NĐ 68/2026/NĐ-CP</span>
+                </div>
+              </div>
+            </div>
+            <div class="chat-suggest" aria-label="Câu hỏi gợi ý">
+              <a href="https://hokinhdoanh.ai/dang-nhap">Thuế khoán tính thế nào?</a>
+              <a href="https://hokinhdoanh.ai/dang-nhap">Kê khai thuế hàng quý cần gì?</a>
+              <a href="https://hokinhdoanh.ai/dang-nhap">Hóa đơn điện tử cần lưu ý gì?</a>
+            </div>
+            <a class="chat-input" href="https://hokinhdoanh.ai/dang-nhap">
+              <span>Đặt câu hỏi của bạn…</span>
+              <svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg>
+              <span class="send" aria-hidden="true"><svg class="ic"><use href="#i-send"/></svg></span>
+            </a>
+          </figure>
+        </div>
+      </div>
+
+      <div class="ticker" aria-label="Một số văn bản đang được đối chiếu">
+        <p class="ticker-label">Đối chiếu với văn bản còn hiệu lực</p>
+        <div class="ticker-viewport">
+          <ul class="ticker-track">
+            <li>NĐ 141/2026/NĐ-CP</li><li>NĐ 68/2026/NĐ-CP</li><li>NĐ 254/2026/NĐ-CP</li><li>TT 18/2026/TT-BTC</li>
+            <li>NĐ 168/2025/NĐ-CP</li><li>TT 68/2025/TT-BTC</li><li>NĐ 174/2025/NĐ-CP</li><li>TT 152/2025/TT-BTC</li>
+          </ul>
+          <ul class="ticker-track" aria-hidden="true">
+            <li>NĐ 141/2026/NĐ-CP</li><li>NĐ 68/2026/NĐ-CP</li><li>NĐ 254/2026/NĐ-CP</li><li>TT 18/2026/TT-BTC</li>
+            <li>NĐ 168/2025/NĐ-CP</li><li>TT 68/2025/TT-BTC</li><li>NĐ 174/2025/NĐ-CP</li><li>TT 152/2025/TT-BTC</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="tinh-nang">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="eyebrow">Tính năng</span>
+          <h2>Tập trung đúng vào việc của <em class="serif">hộ kinh doanh.</em></h2>
+          <p>Không lan man. Trợ lý chỉ xoay quanh những gì bạn cần nhất: thuế, thủ tục, sổ sách và quy định mới.</p>
+        </header>
+
+        <div class="bento">
+          <article class="card card-wide reveal">
+            <div class="card-icon"><svg class="ic" aria-hidden="true"><use href="#i-receipt"/></svg></div>
+            <h3>Thuế & kê khai</h3>
+            <p>Thuế khoán, kê khai theo quý, hóa đơn điện tử, quyết toán cuối năm — giải thích theo đúng quy định hiện hành, bằng ngôn ngữ dễ hiểu.</p>
+            <ul class="q-cloud" aria-label="Câu hỏi thường gặp về thuế">
+              <li>Thuế khoán tính thế nào?</li>
+              <li>Kê khai thuế hàng quý cần gì?</li>
+              <li>Hóa đơn điện tử cần lưu ý gì?</li>
+              <li>Quyết toán thuế cuối năm ra sao?</li>
+              <li>Ngưỡng miễn thuế là bao nhiêu?</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><svg class="ic" aria-hidden="true"><use href="#i-clipboard"/></svg></div>
+            <h3>Đăng ký & thủ tục</h3>
+            <p>Thành lập, thay đổi đăng ký kinh doanh, giấy phép con và hồ sơ cần chuẩn bị cho từng loại hình.</p>
+            <ul class="checklist" aria-hidden="true">
+              <li><svg class="ic"><use href="#i-check"/></svg>Giấy đề nghị đăng ký</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>Giấy tờ pháp lý cá nhân</li>
+              <li class="todo"><span></span>Giấy phép con (nếu có)</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></div>
+            <h3>Sổ sách kế toán</h3>
+            <p>Hướng dẫn ghi chép sổ sách theo chế độ kế toán mới áp dụng cho hộ và cá nhân kinh doanh.</p>
+            <div class="ledger" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </article>
+
+          <article class="card card-wide card-update reveal">
+            <div class="card-icon"><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg></div>
+            <h3>Cập nhật quy định liên tục</h3>
+            <p>Theo dõi nghị định, thông tư mới nhất liên quan đến hộ kinh doanh, để bạn không bỏ lỡ thay đổi quan trọng.</p>
+            <ul class="update-list">
+              <li>
+                <span class="tag tag-seal">Mới</span>
+                <div><strong>Nghị định 141/2026/NĐ-CP</strong><span>Nâng ngưỡng miễn thuế lên 1 tỷ đồng/năm</span></div>
+              </li>
+              <li>
+                <span class="tag tag-soft">2026</span>
+                <div><strong>Nghị định 254/2026/NĐ-CP</strong><span>Hóa đơn, chứng từ điện tử</span></div>
+              </li>
+              <li>
+                <span class="tag tag-soft">2026</span>
+                <div><strong>Thông tư 18/2026/TT-BTC</strong><span>Hồ sơ, thủ tục kê khai và nộp thuế</span></div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section-tint" id="cach-hoat-dong">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="eyebrow">Cách hoạt động</span>
+          <h2>Từ câu hỏi đến <em class="serif">căn cứ pháp lý.</em></h2>
+          <p>Hỏi như đang nói chuyện với một kế toán quen. Trợ lý lo phần tra cứu.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <div class="step-icon"><svg class="ic" aria-hidden="true"><use href="#i-message"/></svg></div>
+            <h3>Đặt câu hỏi</h3>
+            <p>Gõ hoặc nói câu hỏi bằng ngôn ngữ tự nhiên, không cần biết thuật ngữ chuyên môn.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">02</span>
+            <div class="step-icon"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></div>
+            <h3>AI tra cứu văn bản</h3>
+            <p>Hệ thống đối chiếu câu hỏi với các nghị định, thông tư mới nhất còn hiệu lực.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">03</span>
+            <div class="step-icon step-icon-seal"><svg class="ic" aria-hidden="true"><use href="#i-badge"/></svg></div>
+            <h3>Nhận câu trả lời rõ ràng</h3>
+            <p>Câu trả lời ngắn gọn, kèm trích dẫn căn cứ pháp lý để bạn yên tâm áp dụng.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Regulations -->
+    <section class="section" id="van-ban">
+      <div class="wrap">
+        <div class="split-head reveal">
+          <header class="section-head">
+            <span class="eyebrow">Văn bản pháp luật</span>
+            <h2>Luôn theo kịp <em class="serif">quy định mới nhất.</em></h2>
+            <p>Kho văn bản được cập nhật liên tục — từ thuế, hóa đơn điện tử đến đăng ký và kế toán cho hộ kinh doanh.</p>
+          </header>
+          <div class="filters" role="group" aria-label="Lọc văn bản">
+            <button type="button" aria-pressed="true" data-filter="all">Tất cả <span>8</span></button>
+            <button type="button" aria-pressed="false" data-filter="nd">Nghị định <span>5</span></button>
+            <button type="button" aria-pressed="false" data-filter="tt">Thông tư <span>3</span></button>
+          </div>
+        </div>
+
+        <ul class="docs">
+          <li class="doc doc-new reveal" data-type="nd">
+            <div class="doc-meta"><span class="tag tag-seal">Mới nhất</span><span>Nghị định · 2026</span></div>
+            <h3>Nghị định 141/2026/NĐ-CP</h3>
+            <p>Sửa đổi quy định, nâng ngưỡng miễn thuế lên 1 tỷ đồng/năm.</p>
+          </li>
+          <li class="doc reveal" data-type="nd">
+            <div class="doc-meta"><span>Nghị định · 2026</span></div>
+            <h3>Nghị định 68/2026/NĐ-CP</h3>
+            <p>Chính sách thuế và quản lý thuế đối với hộ kinh doanh.</p>
+          </li>
+          <li class="doc reveal" data-type="nd">
+            <div class="doc-meta"><span>Nghị định · 2026</span></div>
+            <h3>Nghị định 254/2026/NĐ-CP</h3>
+            <p>Quy định mới về hóa đơn, chứng từ điện tử, thay thế toàn bộ quy định cũ.</p>
+          </li>
+          <li class="doc reveal" data-type="tt">
+            <div class="doc-meta"><span>Thông tư · 2026</span></div>
+            <h3>Thông tư 18/2026/TT-BTC</h3>
+            <p>Hồ sơ, thủ tục kê khai và nộp thuế đối với hộ kinh doanh.</p>
+          </li>
+          <li class="doc reveal" data-type="nd">
+            <div class="doc-meta"><span>Nghị định · 2025</span></div>
+            <h3>Nghị định 168/2025/NĐ-CP</h3>
+            <p>Đăng ký doanh nghiệp và thủ tục thành lập hộ kinh doanh mới.</p>
+          </li>
+          <li class="doc reveal" data-type="tt">
+            <div class="doc-meta"><span>Thông tư · 2025</span></div>
+            <h3>Thông tư 68/2025/TT-BTC</h3>
+            <p>Hệ thống biểu mẫu đăng ký hộ kinh doanh mới nhất.</p>
+          </li>
+          <li class="doc reveal" data-type="nd">
+            <div class="doc-meta"><span>Nghị định · 2025</span></div>
+            <h3>Nghị định 174/2025/NĐ-CP</h3>
+            <p>Hướng dẫn giảm thuế giá trị gia tăng đối với cơ sở kinh doanh.</p>
+          </li>
+          <li class="doc reveal" data-type="tt">
+            <div class="doc-meta"><span>Thông tư · 2025</span></div>
+            <h3>Thông tư 152/2025/TT-BTC</h3>
+            <p>Chế độ kế toán mới áp dụng cho hộ kinh doanh, cá nhân kinh doanh.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-ink" id="bang-gia">
+      <div class="wrap">
+        <div class="pricing">
+          <header class="section-head reveal">
+            <span class="eyebrow eyebrow-inv">Bảng giá</span>
+            <h2>Không thuê bao. Chỉ trả tiền cho <em class="serif">câu trả lời.</em></h2>
+            <p>Nạp bao nhiêu dùng bấy nhiêu. Mỗi câu hỏi tốn một lượng token tùy độ phức tạp — bạn chỉ trả khi thực sự nhận được câu trả lời.</p>
+            <ul class="perks">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-infinity"/></svg>Token không có hạn sử dụng</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-history"/></svg>Lưu lịch sử hội thoại</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg>Quản lý token đã nạp</li>
+            </ul>
+            <a class="btn btn-seal btn-lg" href="https://hokinhdoanh.ai/dang-nhap">Tạo tài khoản miễn phí <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </header>
+
+          <dl class="price-board reveal">
+            <div class="price-row">
+              <dt>Mở tài khoản</dt>
+              <dd><strong>0đ</strong><span>Miễn phí</span></dd>
+            </div>
+            <div class="price-row">
+              <dt>Thuê bao hàng tháng</dt>
+              <dd><strong>0đ</strong><span>Không có</span></dd>
+            </div>
+            <div class="price-row price-row-hl">
+              <dt>Nạp tối thiểu để bắt đầu</dt>
+              <dd><strong>10.000đ</strong><span>Dùng đến khi hết</span></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- App -->
+    <section class="section" id="ung-dung">
+      <div class="wrap app">
+        <div class="app-copy reveal">
+          <span class="eyebrow">Ứng dụng di động</span>
+          <h2>Trợ lý thuế <em class="serif">trong túi áo.</em></h2>
+          <p>Đang ở cửa hàng, đang đi giao hàng hay vừa nhận thông báo từ cơ quan thuế — mở ứng dụng, gõ hoặc nói câu hỏi, mọi lúc mọi nơi.</p>
+          <div class="stores">
+            <a class="store" href="https://apps.apple.com/vn/app/hokinhdoanh-ai/id6790461135?l=vi" target="_blank" rel="noopener">
+              <svg class="ic" aria-hidden="true"><use href="#i-apple"/></svg>
+              <span><small>Tải về trên</small>App Store</span>
+            </a>
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.nextvn.hkdapp&amp;hl=vi" target="_blank" rel="noopener">
+              <svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>
+              <span><small>Tải về trên</small>Google Play</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="phone-stage reveal" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="p-head">
+                <svg class="p-mark"><use href="#mark"/></svg>
+                <span>Hộ Kinh Doanh AI</span>
+              </div>
+              <div class="p-msg p-user">Ngưỡng miễn thuế mới là bao nhiêu?</div>
+              <div class="p-msg p-ai">Theo Nghị định 141/2026/NĐ-CP, ngưỡng miễn thuế được nâng lên <b>1 tỷ đồng/năm</b>.<span class="p-cite">NĐ 141/2026/NĐ-CP</span></div>
+              <div class="p-chips">
+                <span>Thuế khoán tính thế nào?</span>
+                <span>Hóa đơn điện tử cần lưu ý gì?</span>
+              </div>
+              <div class="p-input">
+                <span>Đặt câu hỏi…</span>
+                <span class="p-mic"><svg class="ic"><use href="#i-mic"/></svg></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-tint" id="hoi-dap">
+      <div class="wrap faq">
+        <header class="section-head reveal">
+          <span class="eyebrow">Hỏi đáp</span>
+          <h2>Câu hỏi <em class="serif">thường gặp.</em></h2>
+          <p>Chưa thấy câu trả lời bạn cần? <a href="#lien-he">Liên hệ với chúng tôi</a>.</p>
+        </header>
+
+        <div class="faq-list reveal">
+          <details open>
+            <summary>AI có thể trả lời những câu hỏi gì?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Hầu hết mọi thắc mắc về thuế và nghiệp vụ kế toán liên quan đến hộ kinh doanh — từ ngưỡng miễn thuế, kê khai, hóa đơn điện tử, sổ sách kế toán, quyết toán cuối năm cho đến các tình huống phát sinh trong quá trình kinh doanh.</p>
+          </details>
+          <details>
+            <summary>Hướng dẫn thủ tục hành chính có chính xác không?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Trợ lý được cập nhật theo các nghị định, thông tư hiện hành và luôn kèm trích dẫn căn cứ. Tuy vậy, quy định có thể thay đổi, nên bạn vẫn nên kiểm tra lại với cơ quan chức năng trước khi thực hiện.</p>
+          </details>
+          <details>
+            <summary>Tôi có cần đăng ký tài khoản không?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Có. Tài khoản giúp bạn đặt câu hỏi, lưu lịch sử hội thoại và quản lý token đã nạp. Đăng ký hoàn toàn miễn phí — bạn chỉ trả tiền khi thực sự sử dụng.</p>
+          </details>
+          <details>
+            <summary>Token là gì và được tính như thế nào?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Token là đơn vị tính phí cho mỗi câu hỏi. Mỗi câu hỏi tốn một lượng token nhất định tùy độ phức tạp. Bạn có thể nạp từ 10.000đ và token không có hạn sử dụng.</p>
+          </details>
+          <details>
+            <summary>Dữ liệu và câu hỏi của tôi có bị lộ không?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Câu hỏi được gửi đến đối tác cung cấp mô hình AI để xử lý và trả lời. Dữ liệu được bảo mật và không sử dụng ngoài mục đích trả lời câu hỏi của bạn. Bạn nên tránh nhập các thông tin nhạy cảm không cần thiết cho việc tư vấn.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="lien-he">
+      <div class="wrap contact">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">Liên hệ</span>
+          <h2>Trò chuyện với <em class="serif">đội ngũ của chúng tôi.</em></h2>
+          <p>Có thắc mắc về sản phẩm, chi phí hoặc cần hỗ trợ kỹ thuật? Để lại lời nhắn, chúng tôi phản hồi trong vòng 24 giờ làm việc.</p>
+          <ul class="contact-list">
+            <li>
+              <span class="c-icon"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <div><small>Email</small><a href="mailto:lienhe@hokinhdoanh.ai">lienhe@hokinhdoanh.ai</a></div>
+            </li>
+            <li>
+              <span class="c-icon"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <div><small>Điện thoại</small><a href="tel:+84393244133">039 324 4133</a></div>
+            </li>
+            <li>
+              <span class="c-icon"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <div><small>Giờ làm việc</small><span>Thứ 2 – Thứ 6, 9:00 – 18:00</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" data-contact novalidate>
+          <div class="field">
+            <label for="cf-name">Họ và tên</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Nguyễn Văn A" required>
+          </div>
+          <div class="field">
+            <label for="cf-reach">Email hoặc số điện thoại</label>
+            <input id="cf-reach" name="reach" type="text" autocomplete="email" placeholder="ban@email.com" required>
+          </div>
+          <div class="field">
+            <label for="cf-msg">Nội dung</label>
+            <textarea id="cf-msg" name="message" rows="5" placeholder="Bạn cần hỗ trợ gì?" required></textarea>
+          </div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Gửi liên hệ <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p class="form-note" data-form-note role="status">Biểu mẫu sẽ mở ứng dụng email của bạn với nội dung đã điền sẵn.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-band">
+      <div class="wrap cta-inner reveal">
+        <svg class="cta-mark" aria-hidden="true"><use href="#mark"/></svg>
+        <h2>Câu hỏi thuế tiếp theo của bạn, <em class="serif">có lời giải.</em></h2>
+        <p>Mở tài khoản miễn phí, nạp từ 10.000đ và hỏi bất cứ lúc nào.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="https://hokinhdoanh.ai/dang-nhap">Bắt đầu ngay <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost btn-lg" href="#ung-dung">Tải ứng dụng</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+          <span class="brand-word">hokinhdoanh<span>.ai</span></span>
+        </a>
+        <p>Trợ lý AI tư vấn thuế & kế toán cho hộ kinh doanh Việt Nam.</p>
+      </div>
+      <nav aria-label="Sản phẩm">
+        <h4>Sản phẩm</h4>
+        <a href="#tinh-nang">Tính năng</a>
+        <a href="#van-ban">Văn bản pháp luật</a>
+        <a href="#bang-gia">Bảng giá</a>
+        <a href="#ung-dung">Ứng dụng</a>
+      </nav>
+      <nav aria-label="Pháp lý">
+        <h4>Pháp lý</h4>
+        <a href="https://hokinhdoanh.ai/dieu-khoan-su-dung">Điều khoản sử dụng</a>
+        <a href="https://hokinhdoanh.ai/quyen-rieng-tu">Quyền riêng tư</a>
+        <a href="https://hokinhdoanh.ai/huong-dan-xoa-tai-khoan">Xóa tài khoản</a>
+      </nav>
+      <div>
+        <h4>Liên hệ</h4>
+        <a href="mailto:lienhe@hokinhdoanh.ai">lienhe@hokinhdoanh.ai</a>
+        <a href="tel:+84393244133">039 324 4133</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© 2026 Hộ Kinh Doanh AI</p>
+      <p>Thông tin mang tính tham khảo. Vui lòng đối chiếu với cơ quan thuế khi cần thiết.</p>
+    </div>
+  </footer>
+</body>
+</html>

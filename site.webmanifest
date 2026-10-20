@@ -1,0 +1,13 @@
+{
+  "name": "Hộ Kinh Doanh AI",
+  "short_name": "HKD AI",
+  "description": "Trợ lý AI tư vấn thuế & kế toán cho hộ kinh doanh",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F7F3EA",
+  "theme_color": "#0F3B2E",
+  "icons": [
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

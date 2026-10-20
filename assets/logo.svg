@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hộ Kinh Doanh AI">
+  <rect width="64" height="64" rx="16" fill="#0F3B2E"/>
+  <path d="M19 13h24a7 7 0 0 1 7 7v12a7 7 0 0 1-7 7H29.5l-8.6 7.2c-.8.7-1.9.1-1.9-.9V39a7 7 0 0 1-7-7V20a7 7 0 0 1 7-7Z" fill="#F7F3EA"/>
+  <rect x="20" y="21" width="20" height="3.6" rx="1.8" fill="#0F3B2E"/>
+  <rect x="20" y="28.4" width="12" height="3.6" rx="1.8" fill="#0F3B2E"/>
+  <circle cx="46" cy="43" r="11.5" fill="#0F3B2E"/>
+  <circle cx="46" cy="43" r="9" fill="#E04E2E"/>
+  <path d="m41.6 43.2 3 3 5.8-6" fill="none" stroke="#F7F3EA" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
